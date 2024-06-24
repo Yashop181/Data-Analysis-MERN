@@ -1,12 +1,14 @@
 import { Link ,Outlet } from "react-router-dom"
+import "../Csss/Layout.css"
 const Layout = () => {
   return (
     <div>
-      <Link to="/add">Add Data</Link>
-      <Link to="/chart">Display Data</Link>
-      <hr />    
+      <div className="navbar">
+        <Link to="/add" className="navbar-link">Add Data</Link>
+        <Link to="/chart" className="navbar-link">Display Data</Link>
+      </div>
+      <hr />
       <Outlet />
-
     </div>
   )
 }
